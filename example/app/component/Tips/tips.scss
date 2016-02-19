@@ -1,0 +1,127 @@
+.u-miniTips {
+     background: rgba(0,0,0,0.8);
+     text-align: center;
+     position: relative;
+     padding: 15px 30px;
+     border-radius: 6px;
+     right:50%;
+     color: #fff;
+     font-size: 28px;
+     font-family: '微软雅黒';
+     font-weight: normal;
+     line-height: 32px;
+ }
+.u-miniTips-container{
+    z-index: 99999;
+    left:50%;
+    top: 45%;
+    position:fixed;
+}
+
+.u-miniTips i {
+    float: left;
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    background: #00CCFF;
+    border-radius: 50%;
+    margin: 3px 10px 3px 0px;
+    position: relative
+}
+
+.u-miniTips p {
+    margin: 0px;
+    display: inline-block;
+    max-width: 530px;
+    box-sizing: border-box;
+    text-align: left
+}
+
+.u-miniTips.info i {
+    background: #00CCFF
+}
+
+.u-miniTips.success i {
+    background: #00FF33
+}
+
+.u-miniTips.error i {
+    background: #F00
+}
+
+.u-miniTips.warning i {
+    background: #FFC200
+}
+
+.u-miniTips.loading i {
+    background-color: transparent;
+    border: 2px solid #fff;
+    box-sizing: border-box
+}
+
+.u-miniTips.loading i:before,.u-miniTips.loading i:after {
+    content: '';
+    width: 8px;
+    height: 2px;
+    background: #fff;
+    position: absolute;
+    top: 11px;
+    left: 11px;
+    -moz-transform-origin: 1px 1px;
+    -ms-transform-origin: 1px 1px;
+    -webkit-transform-origin: 1px 1px;
+    transform-origin: 1px 1px
+}
+
+.u-miniTips.loading i:before {
+    -moz-animation: tips_loading_minhand 3s linear infinite;
+    -webkit-animation: tips_loading_minhand 3s linear infinite;
+    animation: tips_loading_minhand 3s linear infinite
+}
+
+.u-miniTips.loading i:after {
+    width: 10px;
+    -moz-animation: tips_loading_minhand 0.8s linear infinite;
+    -webkit-animation: tips_loading_minhand 0.8s linear infinite;
+    animation: tips_loading_minhand 0.8s linear infinite
+}
+
+@-moz-keyframes tips_loading_minhand {
+    0% {
+        -moz-transform: rotate(0deg);
+        transform: rotate(0deg)
+    }
+
+    100% {
+        -moz-transform: rotate(360deg);
+        transform: rotate(360deg)
+    }
+}
+
+@-webkit-keyframes tips_loading_minhand {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg)
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg)
+    }
+}
+
+@keyframes tips_loading_minhand {
+    0% {
+        -moz-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg)
+    }
+
+    100% {
+        -moz-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg)
+    }
+}
